@@ -1,0 +1,51 @@
+property-screening-platform/
+│
+├── backend/                   # FastAPI backend
+│   ├── app/
+│   │   ├── main.py             # Entry point for FastAPI
+│   │   ├── api/                # API routes
+│   │   │   ├── __init__.py
+│   │   │   └── listings.py     # Search/filter endpoints
+│   │   ├── core/               # Config & utilities
+│   │   │   ├── config.py
+│   │   │   └── database.py     # DB connection setup
+│   │   ├── models/             # SQLAlchemy models
+│   │   │   └── listing.py
+│   │   ├── schemas/            # Pydantic schemas
+│   │   │   └── listing.py
+│   │   ├── services/           # Business logic
+│   │   │   └── listing_service.py
+│   │   └── tests/              # Unit tests
+│   └── requirements.txt        # Backend dependencies
+│
+├── scrapers/                   # Web scrapers for property sites
+│   ├── propertyguru_scraper.py
+│   ├── iproperty_scraper.py
+│   ├── mudah_scraper.py
+│   ├── utils.py                # Shared scraper utilities
+│   └── README.md               # Notes on running scrapers
+│
+├── frontend/                   # React frontend
+│   ├── src/
+│   │   ├── components/         # UI components
+│   │   │   ├── SearchBar.jsx
+│   │   │   ├── FilterPanel.jsx
+│   │   │   └── ListingCard.jsx
+│   │   ├── pages/              # Pages (routes)
+│   │   │   ├── Home.jsx
+│   │   │   └── Results.jsx
+│   │   ├── services/           # API calls
+│   │   │   └── api.js
+│   │   └── App.jsx             # Root component
+│   ├── package.json
+│   └── tailwind.config.js
+│
+├── docs/                       # Documentation
+│   ├── architecture-diagram.png
+│   ├── roadmap.md              # Project timeline & milestones
+│   └── data-model.md           # DB schema description
+│
+├── .env.example                # Example env variables
+├── docker-compose.yml          # (Optional) for backend + db setup
+├── README.md                   # Project overview
+└── LICENSE
